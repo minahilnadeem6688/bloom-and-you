@@ -4,7 +4,7 @@
 
 **A self-care gift store: browse, customise and order.**
 
-**[Live site](https://bloom-and-you-eight.vercel.app)**
+**[Live site](https://bloom-and-you-app.vercel.app)**
 
 <img src="docs/screenshots/home.png" width="860" alt="Bloom & You home page" />
 
