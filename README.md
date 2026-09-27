@@ -77,7 +77,7 @@ Add `VITE_API_URL` under Environment Variables once the API is hosted.
 
 ## Author
 
-**Minahil Nadeem** · [Portfolio](https://minahil-nadeem.vercel.app) · [GitHub](https://github.com/minahilnadeem6688) · [LinkedIn](https://www.linkedin.com/in/minahil-nadeem23)
+**Minahil Nadeem** · [GitHub](https://github.com/minahilnadeem6688) · [LinkedIn](https://www.linkedin.com/in/minahil-nadeem23)
 
 ## License
 
