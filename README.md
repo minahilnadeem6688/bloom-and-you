@@ -18,6 +18,7 @@ gift in the customiser, keep a cart, create an account and check out.
 
 ## Features
 
+- A 3D rose on the home page that blooms open on load, built with Three.js (loaded on demand, paused off-screen, still for reduced motion)
 - Category pages for six product lines, each with its own gallery
 - **Customiser** for building a personalised gift
 - **Cart** shared across pages with React Context, with live item counts in the navigation
@@ -42,7 +43,7 @@ gift in the customiser, keep a cart, create an account and check out.
 
 | Layer | Technology |
 | --- | --- |
-| Front end | React 19, React Router 7, Vite, CSS |
+| Front end | React 19, React Router 7, Vite, CSS, Three.js |
 | State | React Context (cart) |
 | API | Node.js, Express and MongoDB (accounts, checkout, contact) |
 | Hosting | Vercel |

@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../styles/home.css"; 
+import "../styles/home.css";
+import BloomScene from "../components/BloomScene";
 
 // OUR STORY images
 import os1 from "../assets/images/os1.png"; 
@@ -79,12 +80,22 @@ export default function Home() {
 
       {/* HERO */}
       <section className="hero-section">
-        <div className="hero-content-box">
-          <h1 className="hero-title">Find Your Bloom</h1>
-          <p className="hero-desc">
-            Explore our customizable self-care collection. Click a category to view 
-            ready-to-buy options, or customize directly!
-          </p>
+        <div className="hero-frame">
+          <div className="hero-copy">
+            <p className="hero-eyebrow">Self-care, made personal</p>
+            <h1 className="hero-title">Find Your Bloom</h1>
+            <p className="hero-desc">
+              Explore our customizable self-care collection. Click a category to view
+              ready-to-buy options, or customize directly!
+            </p>
+            <div className="hero-actions">
+              <Link to="/products" className="hero-btn">Shop the collection</Link>
+              <Link to="/customize" className="hero-btn hero-btn--ghost">Design your own</Link>
+            </div>
+          </div>
+          <div className="hero-art">
+            <BloomScene />
+          </div>
         </div>
       </section>
 
