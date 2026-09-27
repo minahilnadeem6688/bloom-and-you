@@ -215,7 +215,7 @@ export default function BloomScene() {
       };
 
       const frame = (now) => {
-        const dt = Math.min(0.05, (now - last) / 1000);
+        const dt = Math.min(0.1, (now - last) / 1000);
         last = now;
         time += dt;
         pose(time);
