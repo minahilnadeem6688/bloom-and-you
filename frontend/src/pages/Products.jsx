@@ -114,12 +114,6 @@ export default function Products() {
           ))}
         </div>
       </div>
-
-      <footer className="site-footer">
-        <div className="footer-copyright">
-          <span>© 2025 Bloom & You | Handcrafted for Your Wellness.</span>
-        </div>
-      </footer>
     </div>
   );
 }

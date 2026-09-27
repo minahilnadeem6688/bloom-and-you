@@ -292,13 +292,6 @@ export default function Checkout() {
           </button>
         </div>
       </div>
-
-      {/* FOOTER */}
-      <footer className="site-footer">
-        <div className="footer-copyright" style={{justifyContent: 'center'}}>
-          <span>© 2025 Bloom & You | Secure Checkout</span>
-        </div>
-      </footer>
     </div>
   );
 }

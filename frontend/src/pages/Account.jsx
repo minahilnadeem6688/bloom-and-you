@@ -260,8 +260,6 @@ export default function Account() {
           </div>
         </div>
       </div>
-
-      {/* FOOTER */}
     </div>
   );
 }

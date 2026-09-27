@@ -6,7 +6,7 @@
 
 **[Live site](https://bloom-and-you-app.vercel.app)**
 
-<img src="docs/screenshots/home.png" width="860" alt="Bloom & You home page" />
+<img src="docs/screenshots/01-home.webp" width="860" alt="Bloom & You home page" />
 
 </div>
 
@@ -24,14 +24,19 @@ gift in the customiser, keep a cart, create an account and check out.
 - **Accounts:** sign up and log in
 - **Checkout** and a **contact form** that post to a REST API
 - Client-side routing with React Router, and a soft brand palette throughout
+- Laid out for phones from 360px up, with a shared footer and line icons
 
 ## Screenshots
 
 | Products | Customise |
 | --- | --- |
-| <img src="docs/screenshots/products.png" alt="Products" /> | <img src="docs/screenshots/customize.png" alt="Customiser" /> |
-| **Account** | **Cart** |
-| <img src="docs/screenshots/account.png" alt="Account" /> | <img src="docs/screenshots/cart.png" alt="Cart" /> |
+| <img src="docs/screenshots/02-categories.webp" alt="Product categories" /> | <img src="docs/screenshots/03-customize.webp" alt="Customising a scented candle" /> |
+| **Bag** | **Checkout** |
+| <img src="docs/screenshots/05-cart.webp" alt="Bag with three items" /> | <img src="docs/screenshots/06-checkout.webp" alt="Checkout with an order summary" /> |
+| **Account** | **Footer** |
+| <img src="docs/screenshots/04-account.webp" alt="Create account form" /> | <img src="docs/screenshots/07-footer.webp" alt="Site footer with shop and help links" /> |
+
+<p align="center"><img src="docs/screenshots/08-phones.webp" width="860" alt="Home, customiser and footer on a phone" /></p>
 
 ## Tech stack
 

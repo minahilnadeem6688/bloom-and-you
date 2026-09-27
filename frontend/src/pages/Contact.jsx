@@ -112,8 +112,6 @@ export default function Contact() {
           {status && <p className="status-message">{status}</p>}
         </div>
       </div>
-
-      {/* SHARED FOOTER */}
     </div>
   );
 }

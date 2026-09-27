@@ -181,12 +181,6 @@ export default function Customize() {
 
         </div>
       </div>
-
-      <footer className="site-footer">
-        <div className="footer-copyright">
-           <span>© 2025 Bloom & You | Engineered for Your Wellness.</span>
-        </div>
-      </footer>
     </div>
   );
 }
