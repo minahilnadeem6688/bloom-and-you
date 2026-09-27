@@ -1,0 +1,36 @@
+/* Header stays in the brand's dark style on every page (contact.css used to override it) */
+body .site-header { background-color: var(--color-dark, #1A1A1A); }
+body .logo a { color: var(--color-lavender, #9D8FB8); }
+body .site-nav a { color: #DDD; }
+body .site-nav a:hover { color: #FFF; }
+body .site-nav a.nav-pill { color: #FFF; }
+
+/* Phones and small tablets: same look, laid out for narrow screens */
+img, video { max-width: 100%; }
+input, select, textarea, button { max-width: 100%; }
+
+@media (max-width: 700px) {
+  body .site-header {
+    height: auto;
+    min-height: 70px;
+    flex-direction: column;
+    gap: 10px;
+    padding: 16px 16px 14px;
+    text-align: center;
+  }
+  body .logo a { font-size: 1.5rem; }
+  body .site-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4px 18px;
+  }
+  body .site-nav a {
+    margin-left: 0;
+    font-size: 0.78rem;
+    letter-spacing: 0.06em;
+    padding: 6px 2px;
+  }
+  body .site-nav a.nav-pill { padding: 6px 12px; }
+  body .form-group, body .form-row, body .form-row > * { min-width: 0; }
+}

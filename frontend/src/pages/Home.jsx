@@ -162,24 +162,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* FOOTER */}
-      <footer className="site-footer">
-        <div className="footer-contact">
-          <h3>contact us</h3>
-          <div className="social-icons">
-            <a href="https://www.instagram.com/bbloomandyou" target="_blank" rel="noopener noreferrer"><span>📷</span></a>
-            <a href="https://pin.it/6PPIfHbEC" target="_blank" rel="noopener noreferrer"><span>📌</span></a>
-            <a href="mailto:bloomandyou.social@gmail.com"><span>✉</span></a>
-            <a href="https://www.linkedin.com/company/bloom-and-you/" target="_blank" rel="noopener noreferrer"><span>in</span></a>
-            <Link to="/contact" title="Write to us"><span>📝</span></Link>
-          </div>
-        </div>
-        <div className="footer-copyright">
-          <span>© 2025 Bloom & You | Privacy Policy | Terms of Service</span>
-          <span>Handcrafted in Pakistan. Engineered for Your Wellness.</span>
-        </div>
-      </footer>
-
     </div>
   );
 }

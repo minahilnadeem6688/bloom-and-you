@@ -14,7 +14,8 @@ import Pajamas from './pages/Pajamas';
 import Skincare from './pages/Skincare';
 import Bouquets from './pages/Bouquets';
 import FaceMasks from './pages/FaceMasks';
-import Contact from './pages/Contact'; // <--- NEW IMPORT
+import Contact from './pages/Contact';
+import Footer from './components/Footer';
 
 // --- NEW: Helper Component to handle Scrolling ---
 function ScrollToAnchor() {
@@ -67,6 +68,7 @@ function App() {
         
         <Route path="*" element={<Home />} />
       </Routes>
+      <Footer />
     </>
   );
 }

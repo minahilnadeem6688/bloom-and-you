@@ -1,0 +1,82 @@
+/* Site footer: same palette and type as the rest of Bloom & You */
+.bf {
+  background: #FBEAEA;
+  color: #1A1A1A;
+  border-top: 1px solid #E6C1D5;
+  font-family: 'Poppins', sans-serif;
+  margin-top: auto;
+}
+.bf__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 56px 24px 40px;
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr;
+  gap: 40px;
+}
+.bf__logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  color: #1A1A1A;
+  text-decoration: none;
+  letter-spacing: 0.01em;
+}
+.bf__tag {
+  margin: 10px 0 22px;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #5b5560;
+  max-width: 26ch;
+}
+.bf__social { display: flex; gap: 10px; }
+.bf__social a {
+  width: 40px; height: 40px;
+  display: inline-flex; align-items: center; justify-content: center;
+  border: 1px solid #D6A6C3;
+  border-radius: 50%;
+  color: #1A1A1A;
+  background: rgba(255, 255, 255, 0.55);
+  transition: background 0.25s, border-color 0.25s, color 0.25s, transform 0.25s;
+}
+.bf__social a:hover, .bf__social a:focus-visible {
+  background: #1A1A1A; border-color: #1A1A1A; color: #FBEAEA; transform: translateY(-2px);
+}
+.bf__social svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+.bf__social svg .fill { fill: currentColor; stroke: none; }
+.bf__col { display: flex; flex-direction: column; gap: 10px; }
+.bf__col h4 {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.1rem;
+  margin-bottom: 6px;
+}
+.bf__col a {
+  color: #3d3840;
+  text-decoration: none;
+  font-size: 0.9rem;
+  width: fit-content;
+  background: linear-gradient(#9D8FB8, #9D8FB8) 0 100% / 0 1px no-repeat;
+  transition: background-size 0.3s, color 0.3s;
+}
+.bf__col a:hover { color: #1A1A1A; background-size: 100% 1px; }
+.bf__base {
+  border-top: 1px solid #E6C1D5;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 18px 24px 24px;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 0.78rem;
+  color: #6b6570;
+  letter-spacing: 0.02em;
+}
+
+@media (max-width: 768px) {
+  .bf__inner { grid-template-columns: 1fr 1fr; gap: 32px 24px; padding: 44px 20px 32px; }
+  .bf__brand { grid-column: 1 / -1; }
+}
+@media (max-width: 420px) {
+  .bf__base { flex-direction: column; align-items: flex-start; }
+}

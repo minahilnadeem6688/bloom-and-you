@@ -225,7 +225,7 @@ export default function Account() {
                     className="password-toggle-icon"
                     onClick={() => setShowPassword(!showPassword)}
                   >
-                    {showPassword ? "👁️" : "🙈"}
+                    {showPassword ? <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M2 12s3.6-6.5 10-6.5S22 12 22 12s-3.6 6.5-10 6.5S2 12 2 12z" /><circle cx="12" cy="12" r="3" /></svg> : <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M3 3l18 18M10.6 5.6A9.8 9.8 0 0 1 12 5.5c6.4 0 10 6.5 10 6.5a17 17 0 0 1-3.2 3.9M6.2 6.9C3.6 8.7 2 12 2 12s3.6 6.5 10 6.5c1.5 0 2.9-.4 4.1-.9" /><path d="M9.9 9.9a3 3 0 0 0 4.2 4.2" /></svg>}
                   </span>
                 </div>
                 {errors.password && <span className="error-msg">{errors.password}</span>}
@@ -262,9 +262,6 @@ export default function Account() {
       </div>
 
       {/* FOOTER */}
-      <footer className="site-footer">
-        <span>© 2025 Bloom & You | Handcrafted in Pakistan</span>
-      </footer>
     </div>
   );
 }
