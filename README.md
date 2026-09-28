@@ -55,31 +55,61 @@ bloom-and-you/
 ├── frontend/
 │   ├── src/
 │   │   ├── pages/        One component per page (Home, Products, Customize, Cart, Account, Checkout, Contact, categories)
-│   │   ├── components/   Navbar
+│   │   ├── components/   SiteHeader, Footer, BloomScene (3D hero)
 │   │   ├── context/      CartContext
 │   │   ├── styles/       Page styles
 │   │   ├── assets/       Product images
 │   │   └── api.js        Backend address (VITE_API_URL)
 │   ├── vercel.json       Routes every URL to the app so deep links work
 │   └── package.json
+├── backend/
+│   ├── app.js            Express app (CORS, JSON, routes, errors)
+│   ├── server.js         Local server on port 5000
+│   ├── api/index.js      Vercel serverless entry
+│   ├── routes/           auth (register, login), orders (checkout), contact
+│   ├── models/           User, Order, ContactMessage (Mongoose)
+│   └── .env.example
 └── docs/screenshots/
 ```
+
+## API
+
+Every response is JSON with `success` and `message`.
+
+| Method | Path | Body | Notes |
+| --- | --- | --- | --- |
+| POST | `/register` | `name, email, password` | Password hashed with bcrypt (cost 10). Duplicate emails are rejected. |
+| POST | `/login` | `email, password` | Returns `user: { id, name, email }`. |
+| POST | `/checkout` | `userId, items, total, shippingInfo` | Recomputes the total on the server and saves the order with status `placed`. |
+| POST | `/contact` | `name, email, message` | Saves the message. |
+| GET | `/health` | | Shows whether the database is connected. |
 
 ## Run it locally
 
 ```bash
+# API
+cd backend
+cp .env.example .env   # add your MongoDB connection string
+npm install
+npm run dev            # http://localhost:5000
+
+# Shop, in a second terminal
 cd frontend
 npm install
-npm run dev        # http://localhost:5173
+npm run dev            # http://localhost:5173
 ```
 
-Accounts, checkout and the contact form call the API at `VITE_API_URL`
-(default `http://localhost:5000`). Copy `frontend/.env.example` to `frontend/.env` to change it.
+The shop calls the API at `VITE_API_URL` (default `http://localhost:5000`).
+Copy `frontend/.env.example` to `frontend/.env` to change it.
 
 ## Deploy
 
-On Vercel, import the repository and set **Root Directory** to `frontend` (framework: Vite).
-Add `VITE_API_URL` under Environment Variables once the API is hosted.
+The shop and the API are two Vercel projects from this one repository.
+
+1. **API:** import the repository, set **Root Directory** to `backend` and add
+   `MONGO_URI` (MongoDB Atlas connection string) and `CORS_ORIGIN` (the shop's URL).
+   Open `/health` on the new URL to check the database is connected.
+2. **Shop:** Root Directory `frontend` (framework: Vite). Set `VITE_API_URL` to the API's URL and redeploy.
 
 ## Author
 
