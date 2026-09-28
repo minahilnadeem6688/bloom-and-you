@@ -10,6 +10,7 @@ import sc3  from "../assets/images/sc3.jpeg";
 import sc4  from "../assets/images/sc4.jpeg";
 import sc9  from "../assets/images/sc9.jpeg"; 
 import sc6  from "../assets/images/sc6.jpeg";
+import SiteHeader from "../components/SiteHeader";
 
 export default function ScentedCandles() {
   const { addToCart } = useCart();
@@ -25,13 +26,7 @@ export default function ScentedCandles() {
 
   return (
     <div className="category-container">
-      <header className="site-header">
-        <div className="logo"><Link to="/">Bloom & You</Link></div>
-        <nav className="site-nav">
-          <Link to="/products">Return to Products</Link>
-          <Link to="/cart">Cart</Link>
-        </nav>
-      </header>
+      <SiteHeader />
 
       <div className="category-wrapper">
         <h1 className="category-title">Scented Candles</h1>

@@ -9,6 +9,7 @@ import pj4 from "../assets/images/pj4.jpeg";
 import sk2 from "../assets/images/sk2.jpeg";
 import b2  from "../assets/images/b2.jpeg"; 
 import fm4 from "../assets/images/fm4.jpeg";
+import SiteHeader from "../components/SiteHeader";
 
 export default function Products() {
   // Added 'categoryKey' to match the keys in Customize.jsx
@@ -65,16 +66,7 @@ export default function Products() {
 
   return (
     <div className="products-container">
-      <header className="site-header">
-        <div className="logo"><Link to="/">Bloom & You</Link></div>
-        <nav className="site-nav">
-          <Link to="/products" className="nav-pill active">Products</Link>
-          <Link to="/customize">Customize</Link>
-          <Link to="/account">Account</Link>
-          <Link to="/cart">Cart</Link>
-          <Link to="/contact">Contact</Link>
-        </nav>
-      </header>
+      <SiteHeader />
 
       <div className="products-wrapper">
         <h1 className="products-title">FIND YOUR BLOOM</h1>

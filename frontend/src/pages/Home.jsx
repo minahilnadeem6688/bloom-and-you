@@ -20,6 +20,7 @@ import sc2 from "../assets/images/sc2.jpeg";
 import bb7  from "../assets/images/bb7.jpeg";
 import b2  from "../assets/images/b2.jpeg";
 import pj8  from "../assets/images/pj8.jpeg"; // Fixed typo in import path (was ".jpeg")
+import SiteHeader from "../components/SiteHeader";
 
 export default function Home() {
 
@@ -66,17 +67,7 @@ export default function Home() {
   return (
     <div className="home-container">
 
-      {/* HEADER */}
-      <header className="site-header">
-        <div className="logo"><Link to="/">Bloom & You</Link></div>
-        <nav className="site-nav">
-          <Link to="/products">Products</Link>
-          <Link to="/customize">Customize</Link>
-          <Link to="/account">Account</Link>
-          <Link to="/cart">Cart</Link>
-          <Link to="/contact">Contact</Link>
-        </nav>
-      </header>
+      <SiteHeader />
 
       {/* HERO */}
       <section className="hero-section">

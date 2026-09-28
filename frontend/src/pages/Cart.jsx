@@ -2,6 +2,7 @@ import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useCart } from "../context/CartContext";
 import "../styles/cart.css";
+import SiteHeader from "../components/SiteHeader";
 
 export default function Cart() {
   const { cartItems, removeFromCart, cartTotal } = useCart();
@@ -10,17 +11,7 @@ export default function Cart() {
   return (
     <div className="cart-container">
       
-      {/* HEADER */}
-      <header className="site-header">
-        <div className="logo"><Link to="/">Bloom & You</Link></div>
-        <nav className="site-nav">
-          <Link to="/products">Products</Link>
-          <Link to="/customize">Customize</Link>
-          <Link to="/account">Account</Link>
-          <Link to="/cart" className="nav-pill">Cart ({cartItems.length})</Link>
-          <Link to="/contact">Contact</Link>
-        </nav>
-      </header>
+      <SiteHeader />
 
       <div className="cart-content-wrapper">
         <h1 className="cart-title">Your Bag</h1>

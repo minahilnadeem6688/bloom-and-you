@@ -10,6 +10,7 @@ import bb5 from "../assets/images/bb5.jpeg";
 import bb6 from "../assets/images/bb6.jpeg"; 
 import bb7 from "../assets/images/bb7.jpeg";
 import bb8 from "../assets/images/bb8.jpeg";
+import SiteHeader from "../components/SiteHeader";
 
 export default function BathBombs() {
   const { addToCart } = useCart();
@@ -25,13 +26,7 @@ export default function BathBombs() {
 
   return (
     <div className="category-container">
-      <header className="site-header">
-        <div className="logo"><Link to="/">Bloom & You</Link></div>
-        <nav className="site-nav">
-          <Link to="/products">Return to Products</Link>
-          <Link to="/cart">Cart</Link>
-        </nav>
-      </header>
+      <SiteHeader />
 
       <div className="category-wrapper">
         <h1 className="category-title">Bath Bombs</h1>

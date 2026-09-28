@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useCart } from "../context/CartContext";
 import "../styles/customize.css";
+import SiteHeader from "../components/SiteHeader";
 
 export default function Customize() {
   const { addToCart } = useCart();
@@ -105,16 +106,7 @@ export default function Customize() {
 
   return (
     <div className="customize-container">
-      <header className="site-header">
-        <div className="logo"><Link to="/">Bloom & You</Link></div>
-        <nav className="site-nav">
-          <Link to="/products">Products</Link>
-          <Link to="/customize" className="nav-pill active">Customize</Link>
-          <Link to="/account">Account</Link>
-          <Link to="/cart">Cart</Link>
-          <Link to="/contact">Contact</Link>
-        </nav>
-      </header>
+      <SiteHeader />
 
       <div className="customize-wrapper">
         <h1 className="cust-title">Design Your Ritual</h1>

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../styles/contact.css"; 
 import { API_URL } from "../api";
+import SiteHeader from "../components/SiteHeader";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -50,18 +51,7 @@ export default function Contact() {
   return (
     <div className="contact-page-container">
       
-      {/* SHARED HEADER */}
-      <header className="site-header">
-        <div className="logo"><Link to="/">Bloom & You</Link></div>
-        <nav className="site-nav">
-          <Link to="/products">Products</Link>
-          <Link to="/customize">Customize</Link>
-          <Link to="/contact">Contact</Link>
-          <Link to="/account">Account</Link>
-          <Link to="/cart">Cart</Link>
-          <Link to="/contact">Contact</Link>
-        </nav>
-      </header>
+      <SiteHeader />
 
       {/* CONTACT FORM SECTION */}
       <div className="contact-body">

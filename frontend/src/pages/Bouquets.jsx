@@ -10,6 +10,7 @@ import b3 from "../assets/images/b3.jpeg";
 import b4 from "../assets/images/b4.jpeg";
 import b5 from "../assets/images/b5.jpeg"; 
 import b6 from "../assets/images/b6.jpeg";
+import SiteHeader from "../components/SiteHeader";
 
 export default function Bouquets() {
   const { addToCart } = useCart();
@@ -25,15 +26,7 @@ export default function Bouquets() {
 
   return (
     <div className="category-container">
-      <header className="site-header">
-        <div className="logo">
-          <Link to="/">Bloom & You</Link>
-        </div>
-        <nav className="site-nav">
-          <Link to="/products">Return to Products</Link>
-          <Link to="/cart">Cart</Link>
-        </nav>
-      </header>
+      <SiteHeader />
 
       <div className="category-wrapper">
         <h1 className="category-title">Bouquets</h1>

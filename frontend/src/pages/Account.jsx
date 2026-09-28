@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom"; // Added useNavigate
-import { useCart } from "../context/CartContext";
 import "../styles/account.css";
 import { API_URL } from "../api";
+import SiteHeader from "../components/SiteHeader";
 
 export default function Account() {
-  const { cartItems } = useCart();
   const navigate = useNavigate(); // new
 
   // UI STATE
@@ -150,16 +149,7 @@ export default function Account() {
 
   return (
     <div className="account-container">
-      {/* HEADER */}
-      <header className="site-header">
-        <div className="logo"><Link to="/">Bloom & You</Link></div>
-        <nav className="site-nav">
-          <Link to="/products">Products</Link>
-          <Link to="/customize">Customize</Link>
-          <Link to="/account" className="nav-pill">Account</Link>
-          <Link to="/cart">Cart ({cartItems.length})</Link>
-        </nav>
-      </header>
+      <SiteHeader />
 
       {/* AUTH SECTION */}
       <div className="account-wrapper">

@@ -10,6 +10,7 @@ import  fm3 from "../assets/images/fm3.jpeg";
 import fm4 from "../assets/images/fm4.jpeg";
 import fm7 from "../assets/images/fm7.jpeg"; 
 import  fm8 from "../assets/images/fm8.jpeg";
+import SiteHeader from "../components/SiteHeader";
 
 export default function FaceMasks() {
   const { addToCart } = useCart();
@@ -24,10 +25,7 @@ export default function FaceMasks() {
 
   return (
     <div className="category-container">
-      <header className="site-header">
-        <div className="logo"><Link to="/">Bloom & You</Link></div>
-        <nav className="site-nav"><Link to="/products">Return to Products</Link><Link to="/cart">Cart</Link></nav>
-      </header>
+      <SiteHeader />
       <div className="category-wrapper">
         <h1 className="category-title">Face Masks</h1>
         <div className="cat-grid">

@@ -10,6 +10,7 @@ import pj8 from "../assets/images/pj8.jpeg";
 import pj4 from "../assets/images/pj4.jpeg";
 import pj5 from "../assets/images/pj5.jpeg"; 
 import pj6 from "../assets/images/pj6.jpeg";
+import SiteHeader from "../components/SiteHeader";
 
 export default function Pajamas() {
   const { addToCart } = useCart();
@@ -25,13 +26,7 @@ export default function Pajamas() {
 
   return (
     <div className="category-container">
-      <header className="site-header">
-        <div className="logo"><Link to="/">Bloom & You</Link></div>
-        <nav className="site-nav">
-          <Link to="/products">Return to Products</Link>
-          <Link to="/cart">Cart</Link>
-        </nav>
-      </header>
+      <SiteHeader />
 
       <div className="category-wrapper">
         <h1 className="category-title">Pajamas</h1>

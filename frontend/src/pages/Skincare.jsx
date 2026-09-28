@@ -9,6 +9,7 @@ import sk4 from "../assets/images/sk4.jpeg";
 import sk5 from "../assets/images/sk5.jpeg";
 import sk7 from "../assets/images/sk7.jpeg"; 
 import sk9 from "../assets/images/sk9.jpeg";
+import SiteHeader from "../components/SiteHeader";
 
 
 
@@ -25,10 +26,7 @@ export default function Skincare() {
 
   return (
     <div className="category-container">
-      <header className="site-header">
-        <div className="logo"><Link to="/">Bloom & You</Link></div>
-        <nav className="site-nav"><Link to="/products">Return to Products</Link><Link to="/cart">Cart</Link></nav>
-      </header>
+      <SiteHeader />
       <div className="category-wrapper">
         <h1 className="category-title">Skincare</h1>
         <div className="cat-grid">
