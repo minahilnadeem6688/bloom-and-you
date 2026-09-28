@@ -5,6 +5,7 @@ const contactSchema = new mongoose.Schema(
     name: { type: String, required: true, trim: true, maxlength: 80 },
     email: { type: String, required: true, lowercase: true, trim: true },
     message: { type: String, required: true, trim: true, maxlength: 2000 },
+    emailed: { type: Boolean, default: false }, // true once it reached the owner's inbox
   },
   { timestamps: true }
 );

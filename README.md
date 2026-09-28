@@ -23,7 +23,7 @@ gift in the customiser, keep a cart, create an account and check out.
 - **Customiser** for building a personalised gift
 - **Cart** shared across pages with React Context, with live item counts in the navigation
 - **Accounts:** sign up and log in
-- **Checkout** and a **contact form** that post to a REST API
+- **Checkout** and a **contact form** that post to a REST API; contact messages land in the owner's inbox
 - Client-side routing with React Router, and a soft brand palette throughout
 - Laid out for phones from 360px up, with a shared footer and line icons
 
@@ -67,6 +67,7 @@ bloom-and-you/
 │   ├── server.js         Local server on port 5000
 │   ├── api/index.js      Vercel serverless entry
 │   ├── routes/           auth (register, login), orders (checkout), contact
+│   ├── lib/notify.js     Emails contact messages (Resend)
 │   ├── models/           User, Order, ContactMessage (Mongoose)
 │   └── .env.example
 └── docs/screenshots/
@@ -81,7 +82,7 @@ Every response is JSON with `success` and `message`.
 | POST | `/register` | `name, email, password` | Password hashed with bcrypt (cost 10). Duplicate emails are rejected. |
 | POST | `/login` | `email, password` | Returns `user: { id, name, email }`. |
 | POST | `/checkout` | `userId, items, total, shippingInfo` | Recomputes the total on the server and saves the order with status `placed`. |
-| POST | `/contact` | `name, email, message` | Saves the message. |
+| POST | `/contact` | `name, email, message` | Saves the message and emails it to the shop owner (Reply goes straight to the customer). |
 | GET | `/health` | | Shows whether the database is connected. |
 
 ## Run it locally
@@ -108,6 +109,7 @@ The shop and the API are two Vercel projects from this one repository.
 
 1. **API:** import the repository, set **Root Directory** to `backend` and add
    `MONGO_URI` (MongoDB Atlas connection string) and `CORS_ORIGIN` (the shop's URL).
+   To get contact messages by email, also add `RESEND_API_KEY` (free at resend.com) and `CONTACT_TO` (your inbox).
    Open `/health` on the new URL to check the database is connected.
 2. **Shop:** Root Directory `frontend` (framework: Vite). Set `VITE_API_URL` to the API's URL and redeploy.
 
