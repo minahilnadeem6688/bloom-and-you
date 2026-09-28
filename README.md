@@ -37,7 +37,7 @@ gift in the customiser, keep a cart, create an account and check out.
 | **Account** | **Footer** |
 | <img src="docs/screenshots/04-account.webp" alt="Create account form" /> | <img src="docs/screenshots/07-footer.webp" alt="Site footer with shop and help links" /> |
 
-<p align="center"><img src="docs/screenshots/08-phones.webp" width="860" alt="Home, customiser and footer on a phone" /></p>
+<p align="center"><img src="docs/screenshots/08-phones.webp" width="860" alt="Home, customiser and the menu on a phone" /></p>
 
 ## Tech stack
 
